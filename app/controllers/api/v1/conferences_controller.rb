@@ -22,6 +22,6 @@ class Api::V1::ConferencesController < ApplicationController
   private
 
   def conference_params
-    params.require(:conference).permit(:name, :date, :time, :min_donation, :keynote, :category, workshops_attributes: [:name, :speaker, :description], talks_attributes: [:name, :speaker, :description])
+    params.require(:conference).permit(:name, :date, :time, :min_donation, :keynote, :category, workshops_attributes: [:name, :description], talks_attributes: [:name, :description])
   end
 end
