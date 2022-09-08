@@ -1,7 +1,6 @@
 class Api::V1::ConferencesController < ApplicationController
   def create
     @conference = Conference.new(conference_params)
-
     if @conference.save
       render json: @conference
     else
